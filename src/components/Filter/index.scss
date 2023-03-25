@@ -1,0 +1,66 @@
+.uey_filter--container{
+    width: 100%;
+    padding: 1rem 2rem;
+    border: solid 1px var(--button-color);
+    color: var(--button-text-color);
+    display: flex;
+    gap: 8px 22px;
+    text-align: left;
+    input{
+        font-family: inherit;
+        font-size: 1rem;
+        color: #495057;
+        background: #ffffff;
+        padding: 0.75rem 0.75rem;
+        border: 1px solid #ced4da;
+        appearance: none;
+        border-radius: 6px;
+        max-width: 250px;
+        width: 100%;
+        outline: #ced4da;
+    }
+    .uey_filter--container-dpd{
+        max-width: 250px;
+        width: 100%;
+    }
+    .uey_filter--container-ckb{
+        display: flex;
+        align-items: center;
+        label{
+            margin-left: 10px;
+        }
+        .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover {
+            border-color: var(--button-selected-color);
+            background: var(--button-selected-color);
+            color: #ffffff;
+        }
+        .p-checkbox .p-checkbox-box.p-highlight{
+            border-color: var(--button-selected-color);
+            background: var(--button-selected-color);
+        }
+        .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover, .p-checkbox-box.p-focus {
+            border-color: var(--button-selected-color) !important;
+            box-shadow: var(--button-selected-color) !important;
+        }
+    }
+    .uey_filter--container-btn{
+        margin-left: auto;
+        border-radius: 8px;
+        border: solid 1px var(--button-selected-color);
+        background-color: var(--button-selected-color);
+        color: var(--main-bg-color);
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 1200px){
+    .uey_filter--container{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        .uey_filter--container-btn{
+            margin-left: 0;
+        }
+    }
+}

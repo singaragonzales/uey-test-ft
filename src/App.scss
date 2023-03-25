@@ -1,0 +1,132 @@
+:root {
+	--main-bg-color: #fff;
+	--button-selected-color: #eb2b7d;
+	--button-color: #d6d6d6;
+	--button-text-color: #606060;
+}
+
+.uey_main-page {
+	text-align: center;
+	background-color: var(--main-bg-color);
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+
+  .uey_main-header{
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding: 1rem 6rem;
+    box-shadow: 0 1px 4px 0 rgba(0, 21, 41, 0.12);
+    background: linear-gradient(to bottom, #ececec -32%, var(--main-bg-color) 124%);
+    img{
+      width: 50px;
+      border-radius: 50px;
+      border: 2px solid #eb2b7d;
+    }
+    .uey_main-header-title{
+      font-size: 1.75rem;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1;
+      letter-spacing: normal;
+      color: #3b3b3b;
+    }
+  }
+
+  .uey_container{
+    padding: 1rem 6rem;
+    height: calc(100vh - 98px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .uey_container-select{
+      margin: 3rem 0;
+      button{
+        border-radius: 2px;
+        background-color: var(--main-bg-color);
+        font-size: 1rem;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.75;
+        letter-spacing: normal;
+        text-align: center;
+        cursor: pointer;
+        max-width: 350px;
+        &.uey_container-selected-button{
+          border: solid 1px var(--button-selected-color);
+          background-color: var(--button-selected-color);
+          color: var(--main-bg-color);
+        }
+        &.uey_container-not-selected-button{
+          border: solid 1px var(--button-color);
+          color: var(--button-text-color);
+        }
+        &:focus, &:focus-visible{
+          outline: none;
+        }
+      }
+    }
+
+    .uey_container-noselect{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      p{
+        font-size: 1.5rem;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.75;
+        letter-spacing: normal;
+        text-align: center;
+      }
+      img{
+        width: 100px;
+      }
+    }
+
+    .uey_container-products{
+      height: 100%;
+
+      .uey_container-buypr-data, .uey_container-rentpr-data{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 768px) {
+	.uey_main-header{
+		padding: 1rem 1rem;
+		justify-content: center;
+	}
+  .uey_container-select{
+		margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    button{
+      margin-bottom: 10px;
+      width: 100%;
+    }
+	}
+}
+
+
+@media (max-width: 1024px) {
+	.uey_container{
+		padding: 1rem 3rem !important;
+		height: 100%;
+	}
+}

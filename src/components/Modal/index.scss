@@ -1,0 +1,54 @@
+.p-dialog{
+    width: 45vw;
+}
+
+.uey_modal--container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .uey_modal--container-gallery{
+        padding: 0.5rem;
+        display: flex;
+        img{
+            height: 300px;
+            max-width: 300px;
+            min-width: 300px;
+            width: fit-content;
+        }
+    }
+    .uey_modal--container-info{
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 10px 0px;
+    }
+    hr{
+        width: 100%;
+    }
+}
+
+.uey_modal--container-info-buy{
+    padding: 1rem;
+    border-top-width: 1px;
+    border-color: #e2e8f0;
+    text-align: right;
+    button{
+        border: solid 1px var(--button-selected-color);
+        background-color: var(--button-selected-color);
+        color: var(--main-bg-color);
+    }
+}
+
+@media (max-width: 768px){
+    .p-dialog{
+        width: 100%;
+        .uey_modal--container{
+            align-items: center;
+            flex-direction: column;
+            .uey_modal--container-gallery{
+                padding: 0.5rem;
+                display: flex;
+            }
+        }
+    }
+}

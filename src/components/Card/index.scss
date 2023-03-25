@@ -1,0 +1,116 @@
+.uey_card-container{
+    width: 100%;
+    max-width: 17rem;
+    padding: 1.5rem 0.75rem;
+    .uey_card-container--body{
+        overflow: hidden;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        border: solid 1px var(--button-selected-color);
+        box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 10px 10px -5px rgba(0,0,0,.04);
+        .uey_card_container--image{
+            position: relative;
+            img{
+                max-height: 150px;
+                height: 100%;
+                width: fit-content;
+            }
+            .uey_card_container--icon{
+                position: absolute;
+                top: 11px;
+                right: 11px;
+                display: flex;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 30px;
+                height: 30px;
+                background: var(--button-selected-color);
+                border-radius: 30px;
+                span{
+                    color: #fff;
+                    font-size: 14px;
+                }
+            }
+        }
+        .uey_card-container--product{
+            padding: 0 1rem 1rem 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .product--name{
+                letter-spacing: .025em;
+                text-transform: uppercase;
+                font-size: .875rem;
+                color: #4a5568;
+                font-weight: 700;
+            }
+            .product--price{
+                font-size: 1.5rem;
+                color: #1a202c;
+            }
+            .product--address{
+                color: #4a5568;
+            }
+        }
+        .uey_card-container--seller{
+            padding: 1rem;
+            border-top-width: 1px;
+            border-color: #e2e8f0;
+            background-color: #f7fafc;
+            text-align: left;
+            .seller--title{
+                letter-spacing: .025em;
+                text-transform: uppercase;
+                font-size: .75rem;
+                color: #718096;
+                font-weight: 700;
+            }
+            .seller--info{
+                padding-top: 0.5rem;
+                align-items: center;
+                display: flex;
+                img{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50px;
+                }
+                .seller--info-data{
+                    width: 100%;
+                    padding-left: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    .seller--name, .seller--phone{
+                        color: #1a202c;
+                        font-weight: 700;
+                    }
+                }
+                
+            }
+        }
+        .uey_card-container--buy{
+            padding: 1rem;
+            border-top-width: 1px;
+            border-color: #e2e8f0;
+            text-align: right;
+            button{
+                border: solid 1px var(--button-selected-color);
+                background-color: var(--button-selected-color);
+                color: var(--main-bg-color);
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px){
+    .uey_card_container{
+        width: 33.33333%;
+    }
+}
+
+@media (min-width: 640px){
+    .uey_card_container{
+        width: 50%;
+    }
+}
