@@ -19,7 +19,12 @@ const Card: React.FunctionComponent<CardProps> = ({
     <>
         {productData.map(((prod: any) => (
             <div className="uey_card-container">
-                <div className="uey_card-container--body">
+                <div className="uey_card-container--body"
+                    onClick={() => {
+                        setData(prod); 
+                        setVisible(true)
+                    }}
+                >
                     <div className="uey_card_container--image">
                         <img src={prod.image[0] || ""} alt="" />
                         <div className="uey_card_container--icon" 
@@ -32,10 +37,13 @@ const Card: React.FunctionComponent<CardProps> = ({
                         </div>
                     </div>
                     <div className="uey_card-container--product">
+                        {(prod?.inventory < 10 && prod?.inventory !== null) && (
+                            <span className='text-advice'>{`Solo quedan ${prod?.inventory} unidades`}</span>
+                        )}
                         <span className="product--name">{prod.name}</span>
                         <span className="product--price">${Number.parseFloat(prod.price)}</span>
-                        {typeCard !== "sell_pr" && (
-                            <span className="product--address">742 Evergreen Terrace</span>
+                        {(prod.type !== "sell_pr" && prod.address !== null) && (
+                            <span className="product--address">{prod.address}</span>
                         )}
                     </div>
                     <div className="uey_card-container--seller">

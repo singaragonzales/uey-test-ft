@@ -42,28 +42,28 @@ function App() {
               {pageButton === "Comprar Productos" ? (
                 <div className='uey_container-buypr'>
                   <div className="uey_container-buypr-filter">
-                      <Filter sendFilterProducts={(data: any) => setProductData(data)}/>
+                      <Filter typeFilter={pageButton} sendFilterProducts={(data: any) => setProductData(data)}/>
                   </div>
                   <div className="uey_container-buypr-data">
                       <Card 
                         setVisible={setVisibleModal}
                         setData={(prod) => setProductModal(prod)}
                         productData={productData}
-                        typeCard={typeCard}
+                        typeCard={pageButton}
                       />
                   </div>
                 </div>
               ) : (
                 <div className='uey_container-rentpr'>
                     <div className="uey_container-rentpr-filter">
-
+                      <Filter typeFilter={pageButton} sendFilterProducts={(data: any) => setProductData(data)}/>
                     </div>
                     <div className="uey_container-rentpr-data">
                         <Card 
                           setVisible={setVisibleModal}
                           setData={(prod) => setProductModal(prod)}
                           productData={productData}
-                          typeCard={typeCard}
+                          typeCard={pageButton}
                         />
                     </div>
                 </div>
